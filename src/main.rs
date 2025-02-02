@@ -37,7 +37,7 @@ fn main() -> Result<()> {
 
     let options = Options::from_args();
 
-    let mount_options: Vec<&OsStr> = ["-o", "ro", "-o", "fsname=gilber"]
+    let mount_options: Vec<&OsStr> = ["-o", "ro", "-o", "fsname=gilber", "-o", "allow_other"]
         .iter()
         .map(|x| x.as_ref())
         .collect();
